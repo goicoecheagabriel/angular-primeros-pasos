@@ -1,0 +1,28 @@
+<h1>DBZ Personajes</h1>
+<hr>
+
+<div class="row">
+
+  <div class="col">
+    <dbz-list
+      [characterList]="characters"
+      (onDeleteCharacter)="onDeleteCharacter($event)">
+    </dbz-list>
+
+  </div>
+
+  <div class="col">
+    <dbz-add-character (onNewCharacter)="onNewCharacter($event)"></dbz-add-character>
+
+
+  </div>
+
+</div>
+<div>
+  <div *ngIf="false; else mitemplate">Hola a todos</div>
+
+  <ng-template #mitemplate>
+    <div>Dese el template</div>
+  </ng-template>
+
+</div>
